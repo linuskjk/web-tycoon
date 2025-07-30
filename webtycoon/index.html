@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Website Tycoon – Idle Business Sim</title>
+    <link rel="stylesheet" href="style.css?v=30">
+</head>
+<body>
+    <h1>Website Tycoon</h1>
+    <h2>Your Website Preview</h2>
+    <div id="websitePreview" class="preview-html">
+        <div id="websiteHeader">
+            <img id="websiteFavicon" src="logo.svg" style="width:32px;height:32px;vertical-align:middle;margin-right:8px;">
+            <h3 style="display:inline;">My Awesome Site</h3>
+        </div>
+        <p>Welcome to my website!</p>
+        <div id="chatWidget" style="display:none;margin-top:16px;">
+            <div style="background:#fff;border:1px solid #ccc;border-radius:8px;padding:8px 12px;box-shadow:0 2px 8px #0001;">
+                <b>💬 Live Chat</b><br>
+                <span style="font-size:0.95em;color:#555;">How can we help you?</span>
+            </div>
+        </div>
+        <div id="newsletterWidget" style="display:none;margin-top:16px;">
+            <div style="background:#f1f5f9;border:1px solid #60a5fa;border-radius:8px;padding:8px 12px;box-shadow:0 2px 8px #0001;">
+                <b>📧 Newsletter Signup</b><br>
+                <span style="font-size:0.95em;color:#2563eb;">Get updates in your inbox!</span>
+            </div>
+        </div>
+        <div id="socialWidget" style="display:none;margin-top:16px;">
+            <div style="background:#fff;border:1px solid #d1d5db;border-radius:8px;padding:8px 12px;box-shadow:0 2px 8px #0001;">
+                <b>🌐 Social Links:</b>
+                <span style="margin-left:8px;">🐦</span>
+                <span>📘</span>
+                <span>📸</span>
+            </div>
+        </div>
+        <div id="adsBanner" style="display:none;"></div>
+    </div>
+    <div id="game">
+        <p>Money: $<span id="money">0</span></p>
+        <div id="upgradeCategories">
+            <button onclick="showCategory('core')">Core</button>
+            <button onclick="showCategory('design')">Design</button>
+            <button onclick="showCategory('features')">Features</button>
+            <button onclick="showCategory('monetization')">Monetization</button>
+            <button onclick="showCategory('analytics')">Analytics</button>
+        </div>
+        <div id="upgradeGroups">
+            <div class="upgradeGroup" id="coreUpgrades">
+                <!-- Core upgrades, sorted by price -->
+                <button id="htmlBtn">Unlock HTML (Free)</button> <span id="htmlStatus">Locked</span><br>
+                <button id="cssBtn">Buy Basic CSS ($50)</button> <span id="cssStatus">Locked</span><br>
+                <button id="jsBtn">Add Basic JavaScript ($500)</button> <span id="jsStatus">Locked</span><br>
+                <button id="js2Btn">Upgrade to Advanced JS ($2000)</button> <span id="js2Status">Locked</span><br>
+            </div>
+            <div class="upgradeGroup" id="designUpgrades" style="display:none;">
+                <button id="css2Btn">Upgrade to Modern CSS ($200)</button> <span id="css2Status">Locked</span><br>
+                <button id="faviconBtn">Add Favicon ($2000)</button> <span id="faviconStatus">Locked</span><br>
+                <button id="darkModeBtn">Enable Dark Mode ($10000)</button> <span id="darkModeStatus">Locked</span><br>
+                <button id="animationsBtn">Add Animations ($11000)</button> <span id="animationsStatus">Locked</span><br>
+                <button id="responsiveBtn">Make Responsive ($12000)</button> <span id="responsiveStatus">Locked</span><br>
+            </div>
+            <div class="upgradeGroup" id="featuresUpgrades" style="display:none;">
+                <button id="musicBtn">Add Background Music ($5000)</button> <span id="musicStatus">Locked</span><br>
+                <button id="socialBtn">Add Social Links ($6000)</button> <span id="socialStatus">Locked</span><br>
+                <button id="cookieBannerBtn">Add Cookie Banner ($5000)</button> <span id="cookieBannerStatus">Locked</span><br>
+                <button id="visitorCounterBtn">Add Visitor Counter ($8000)</button> <span id="visitorCounterStatus">Locked</span><br>
+                <button id="newsletterBtn">Add Newsletter Signup ($9000)</button> <span id="newsletterStatus">Locked</span><br>
+                <button id="blogBtn">Add Blog Section ($14000)</button> <span id="blogStatus">Locked</span><br>
+                <button id="chatBtn">Add Live Chat ($15000)</button> <span id="chatStatus">Locked</span><br>
+                <button id="confettiBtn">Confetti Celebration ($20000)</button> <span id="confettiStatus">Locked</span><br>
+            </div>
+            <div class="upgradeGroup" id="monetizationUpgrades" style="display:none;">
+                <button id="adsBtn">Add Ads Banner ($8000)</button> <span id="adsStatus">Locked</span><br>
+            </div>
+            <div class="upgradeGroup" id="analyticsUpgrades" style="display:none;">
+                <button id="seoBtn">Add SEO Optimization ($3000)</button> <span id="seoStatus">Locked</span><br>
+                <button id="analyticsBtn">Add Analytics ($7000)</button> <span id="analyticsStatus">Locked</span><br>
+            </div>
+        </div>
+        <hr>
+        <button id="saveBtn">Save</button>
+        <button id="loadBtn">Load</button>
+        <button id="showCookieBannerBtn" style="display:none;margin-top:10px;">Show Cookie Banner</button>
+    </div>
+    <h2>Leaderboard</h2>
+    <ol id="leaderboard"></ol>
+    <script src="script.js?v=30"></script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #e0e7ff 0%, #f8fafc 100%);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+#game {
+    background: #fff;
+    margin: 40px auto 20px auto;
+    padding: 32px 32px 24px 32px;
+    border-radius: 18px;
+    width: 340px;
+    box-shadow: 0 8px 32px rgba(60, 72, 100, 0.18);
+}
+
+h1 {
+    color: #3b82f6;
+    margin-top: 32px;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+h2 {
+    color: #6366f1;
+    margin-bottom: 8px;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+p, span {
+    font-size: 1.15em;
+    color: #22223b;
+}
+
+button {
+    margin: 10px 0;
+    padding: 12px 24px;
+    font-size: 1em;
+    border: none;
+    border-radius: 8px;
+    background: #6366f1;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.08);
+}
+
+button:active {
+    background: #3b82f6;
+    transform: scale(0.97);
+}
+
+button[disabled] {
+    background: #c7d2fe;
+    color: #a5b4fc;
+    cursor: not-allowed;
+}
+
+.status {
+    font-weight: bold;
+    margin-left: 8px;
+    color: #10b981;
+}
+
+.status.locked {
+    color: #ef4444;
+}
+
+#leaderboard {
+    background: #f1f5f9;
+    border-radius: 10px;
+    padding: 12px 0;
+    margin: 0 auto 24px auto;
+    width: 320px;
+    box-shadow: 0 1px 4px rgba(60, 72, 100, 0.06);
+    list-style: none;
+}
+
+#leaderboard li {
+    font-size: 1.05em;
+    padding: 4px 0;
+    color: #334155;
+}
+
+#websitePreview {
+    margin: 30px auto 20px auto;
+    padding: 24px;
+    border-radius: 12px;
+    width: 320px;
+    min-height: 120px;
+    box-shadow: 0 2px 8px rgba(60, 72, 100, 0.10);
+    background: #fff;
+    transition: all 0.5s;
+}
+
+/* HTML only: plain */
+.preview-html {
+    background: #f3f3f3;
+    color: #222;
+    font-family: serif;
+}
+
+/* Basic CSS: slightly better */
+.preview-basic-css {
+    background: #e0e7ff;
+    color: #374151;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    border: 1px solid #a5b4fc;
+}
+
+/* Modern CSS: fancy */
+.preview-modern-css {
+    background: linear-gradient(135deg, #6366f1 0%, #a5b4fc 100%);
+    color: #fff;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    border: 2px solid #6366f1;
+    box-shadow: 0 4px 24px rgba(99, 102, 241, 0.18);
+}
+
+.preview-modern-css h3,
+.preview-modern-css p {
+    color: #fff;
+    text-shadow: 0 1px 4px #374151, 0 0 2px #6366f1;
+}
+
+/* Basic JS: simple animation */
+.preview-basic-js {
+    animation: pulse 2s infinite;
+}
+@keyframes pulse {
+    0% { box-shadow: 0 0 8px #6366f1; }
+    50% { box-shadow: 0 0 32px #6366f1; }
+    100% { box-shadow: 0 0 8px #6366f1; }
+}
+
+/* Advanced JS: more effects */
+.preview-advanced-js {
+    border: 3px dashed #10b981 !important;
+    animation: rainbow 3s linear infinite;
+}
+@keyframes rainbow {
+    0% { filter: hue-rotate(0deg);}
+    100% { filter: hue-rotate(360deg);}
+}
+
+#websiteFavicon {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+#seoBadge, #analyticsBadge {
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+.preview-dark-mode {
+    background: #18181b !important;
+    color: #fafafa !important;
+    border: 2px solid #6366f1 !important;
+}
+.preview-dark-mode h3, .preview-dark-mode p, .preview-dark-mode span {
+    color: #fafafa !important;
+    text-shadow: 0 1px 4px #222;
+}
+
+/* Chat widget color fix */
+#chatWidget, #chatWidget * {
+    color: #222 !important;
+    background: #fff !important;
+}
+.preview-dark-mode #chatWidget, .preview-dark-mode #chatWidget * {
+    color: #fafafa !important;
+    background: #23232b !important;
+}
+
+/* Social widget color fix */
+#socialWidget, #socialWidget * {
+    color: #374151 !important;
+    background: #111 !important;
+}
+.preview-modern-css #socialWidget, .preview-modern-css #socialWidget * {
+    color: #fff !important;
+    text-shadow: 0 1px 4px #374151, 0 0 2px #6366f1;
+}
+.preview-dark-mode #socialWidget, #socialWidget * {
+    color: #fafafa !important;
+    text-shadow: 0 1px 4px #222;
+}
+
+/* Newsletter widget color fix */
+#newsletterWidget, #newsletterWidget * {
+    color: #2563eb !important;
+    background: #f1f5f9 !important;
+}
+.preview-modern-css #newsletterWidget, .preview-modern-css #newsletterWidget * {
+    color: #fff !important;
+    background: #2563eb !important;
+}
+.preview-dark-mode #newsletterWidget, #newsletterWidget * {
+    color: #fff !important;
+    background: #1e293b !important;
+}
+
+.preview-animations {
+    animation: bounce 1.2s cubic-bezier(.68,-0.55,.27,1.55) infinite alternate;
+    will-change: transform;
+}
+@keyframes bounce {
+    0% { transform: translateY(0);}
+    100% { transform: translateY(-4px);}
+}
+
+#confettiCanvas {
+    pointer-events: none;
+}
+#cookieBanner button {
+    font-weight: bold;
+    color: #b45309;
+}
+
+#cookieBanner, #socialWidget, #socialWidget * {
+    background: #111 !important;
+    color: #fff !important;
+}
