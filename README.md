@@ -91,4 +91,4 @@ MIT License – Feel free to use, modify, and expand this project for your own p
 
 ## 🙌 Created by
 
-Adolf – self-hosted projects & web-based games enthusiast 🚀 
+Linus – self-hosted projects & web-based games enthusiast 🚀 
